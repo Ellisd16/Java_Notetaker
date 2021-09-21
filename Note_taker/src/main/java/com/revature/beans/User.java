@@ -10,7 +10,7 @@ public class User {
 	private String username;
 	private String password;
 	private UserType type;
-	private List<Note> notes;
+	private List<UUID> notes;
 	
 	public User() {
 		super();
@@ -20,7 +20,7 @@ public class User {
 		this();
 		this.username = username;
 		this.password = password;
-		this.type = type;
+		this.type = UserType.User;
 	}
 	public UUID getUserId() {
 		return userId;
@@ -46,10 +46,10 @@ public class User {
 	public void setType(UserType type) {
 		this.type = type;
 	}
-	public List<Note> getNotes() {
+	public List<UUID> getNotes() {
 		return notes;
 	}
-	public void setNotes(List<Note> notes) {
+	public void setNotes(List<UUID> notes) {
 		this.notes = notes;
 	}
 	@Override
