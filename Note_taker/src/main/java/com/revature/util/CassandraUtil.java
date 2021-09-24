@@ -37,7 +37,6 @@ public class CassandraUtil {
 		((MappingCassandraConverter) converter).setUserTypeResolver(new SimpleUserTypeResolver(session));
 		sessionFactory.setSession(session);
 		sessionFactory.setConverter(converter);
-		// Please do not drop all my tables
 		sessionFactory.setSchemaAction(SchemaAction.NONE);
 		
 		return sessionFactory;
